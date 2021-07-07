@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+{% block content %}
+
+<section class="py-7" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2>Penjelasan Model</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <h6>Dataset</h6>
+                        <p class="text-muted">Data yang digunakan dalam pembuatan model ini adalah data berupa foto berekstensi (.jpg) dengan resolusi beragam. Foto ini memiliki dua kondisi yang berbeda, yaitu foto orang yang menggunakan masker dan foto orang yang tidak menggunakan masker. Foto ini akan dilakukan preprocessing, augmentasi data dan data spliting yang membagi data menjadi 90% data training dan 10% data testing sebelum masuk ke dalam pemodelan.</p>
+                        <p class="text-muted"> Dataset yang dikumpulkan dengan cara kolaborasi antara mengambil foto dari beberapa orang dan dari website resmi kaggle yang dapat dillihat <a href="https://www.kaggle.com/omkargurav/face-mask-dataset">disini.</a></p>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <h6>Hasil Training Model</h6>
+                        <div class="col-12">
+                            <img src="/static/images/training_plot.png"
+                                 class="img-thumbnail img-fluid mx-auto d-block">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block custom_js %}
+<script>
+$(document).ready(function(){
+    $('#image-detector').attr('class', 'nav-item');
+    $('#live').attr('class', 'nav-item active');
+})
+
+    function stop(){
+        $("img").attr("src", "/static/images/stay-safe.jpg");
+        $("#stop").attr("class","btn btn-danger active");
+
+        $("#start").attr("class","btn btn-outline-success");
+    }
+    function start(){
+        $("img").attr("src", "{{url_for('main.video_feed')}}");
+        $("#start").attr("class","btn btn-success active");
+
+        $("#stop").attr("class","btn btn-outline-danger");
+    }
+
+</script>
+
+{% endblock %}

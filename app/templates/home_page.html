@@ -1,0 +1,58 @@
+{% extends "template.html" %}
+{% block content %}
+<section class="py-7 py-md-0 bg-hero" id="home">
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
+                <h1 class="heading-black text-capitalize">Mask Recognition</h1>
+                <p class="lead py-3">Mask Recognition adalah aplikasi yang dapaat mendeteksi seseorang apakah dia mengenakan masker atau tidak.</p>
+                <button href="/pengujian" class="btn btn-primary d-inline-flex flex-row align-items-center">
+                    Mulai Sekarang
+                    <em class="ml-2" data-feather="arrow-right"></em>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2>Penjelasan Aplikasi</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 mx-auto">
+                <div class="row">
+                    <div class="col-md-8 mb-5">
+                        <h6>Abstrak</h6>
+                        <p class="text-muted">Coronavirus disease 2019 atau yang dapat didengar dengan COVID-19 merupakan penyakit infeksi pernapasan akut yang disebabkan oleh coronavirus strain severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2 yang pertama kali diidentifikasi pada akhir 2019 di kota Wuhan, Provinsi Hubei China. Salah satu bentuk penanganan yang dapat dilakukan oleh setiap individu adalah penggunaan masker. Saat manusia terbatuk, bersin dan berbicara dapat mengeluarkan droplet berupa air liur. Penggunaan masker dapat mereduksi perpindahan droplet yang keluar dari mulut ke orang lain.</p>
+                        <p class="text-muted"> Penelitian ini bertujuan untuk melakukan prediksi kepada seseorang apakah dia menggunakan masker atau tidak menggunakan masker dengan memanfaatkan model deep learning convolution neural network. Dengan menggunakan dataset berupa foto orang yang menggunakan masker dan tidak menggunakan masker diolah melalu tahap preprocessing, augmentasi data, dan pemodelan. Dari hasil model ini dapat diprediksi apakah seseorang mengguanakan masker atau tidak menggunakan masker</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 mb-5">
+                            <h6>Penulis & Perancang Aplikasi</h6>
+                            <p class="text-muted">Muhammad Rais Sabilullah</p>
+                            <p class="text-muted">NPM : 140810170056</p>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 mb-5">
+                                <a href="https://www.linkedin.com/in/rais-sabilullah-386116168/">
+                                <i class="fa fa-linkedin-square my-auto mx-2" aria-hidden="true"></i> Linkedin
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <a href="mailto:raissabilullah@gmail.com?subject=Mask%20detector" ">
+                                    <i class="fa fa-envelope my-auto mx-2" aria-hidden="true"></i> Mail
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
