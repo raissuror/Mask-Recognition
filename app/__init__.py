@@ -1,11 +1,11 @@
 from flask import Flask
+from flask_ngrok import run_with_ngrok
 
 from app.errors.routes import error_404, error_403, error_401, error_500
 
 
 def create_app():
     app = Flask(__name__)
-
     # Retrieve configuration information
     app.config.from_object('app.config.Config')
 
