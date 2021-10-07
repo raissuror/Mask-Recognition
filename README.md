@@ -1,33 +1,45 @@
-# CV-Mask-detection
-Face Mask Detection web applicaion built with Flask, Keras-TensorFlow, OpenCV. 
-It can be used to detect face masks both in images and in real-time video.
+# Abstrak
+	Coronavirus disease 2019 (COVID-19) merupakan penyakit infeksi
+pernapasan akut yang dapat mematikan, dan dapat menyebar dengan sangat mudah.
+Salah satu bentuk penanganan yang dapat dilakukan oleh setiap individu adalah
+penggunaan masker. Saat manusia terbatuk, bersin dan berbicara dapat
+mengeluarkan droplet berupa air liur. Penggunaan masker dapat mereduksi
+perpindahan droplet yang keluar dari mulut ke orang lain.
+	Penelitian ini bertujuan untuk melakukan prediksi kepada seseorang apakah
+dia menggunakan masker atau tidak menggunakan masker dengan memanfaatkan
+model deep learning convolution neural network. Dengan menggunakan dataset
+berupa foto orang yang menggunakan masker dan tidak menggunakan masker
+diolah melalu tahap preprocessing, augmentasi data, dan pemodelan. Dari hasil
+model ini dapat diprediksi apakah seseorang menggunakan masker atau tidak
+menggunakan masker
+	Dari hasil penelitian didapat nilai akurasi dari validasi model sebesar 100%
+dan nilai validation loss sebesar 0,14%. Dan akurasi dari pengujian sebesar 93,3%
+jika dilakukan dengan kondisi penguji yaitu menggunakan masker dengan benar
+dan tidak menggunakan masker. Dari hasil tersebut dapat disimpulkan bahwa
+pemodelan untuk mendeteksi penggunaan masker sudah dapat berjalan dengan
+sangat baik untuk pendeteksian penggunaan masker
 
-## Demo
-![Alt Text](https://github.com/GalileoParise/CV-Mask-detection/blob/master/mask_detection_live.gif)
-
-## Goal
-The goal is to create a masks detection system, able to recognize face masks both in images, both in real-time video, drawing bounding box around faces. In order to do so, I finetuned MobilenetV2 pretrained on Imagenet, in conjunction with the OpenCV face detection algorithm: that allows me to turn a classifier model into an object detection system.
-
-## Technologies
+## Framework
 - Keras/Tensorflow
 - OpenCV
 - Flask
 - MobilenetV2
 
-## Usage
-You have to install the required packages, you can do it:
-- via pip
+## Cara running aplikasi
+1. Lakukan instalasi packages dengan menggunakan 2 cara ini:
+- menggunakan pip
 ```pip install -r requirements.txt```
-- or via conda
+- menggunakan conda
 ```conda env create -f environment.yml```
 
-Once you installed all the required packages you can type in the command line from the root folder:
+setelah packages terinstal, masukan command di bawah pada root folder:
 
 ```
 python wsgi.py
 ```
-and click on the link that the you will see on the prompt.
 
 ## Data
-The dataset used for training the model is available <a href="https://www.kaggle.com/omkargurav/face-mask-dataset">here</a>.
+Dataset dapat didownload pada website resmi kaggle  <a href="https://www.kaggle.com/omkargurav/face-mask-dataset">disini</a>.
 
+##Referensi
+https://github.com/GalileoParise/CV-Mask-detection
